@@ -6,6 +6,31 @@ export interface ReseniaUsuario {
 
 const ReseniasUsuarios: ReseniaUsuario[] = [
     {
+        nombre: "Sensa",
+        rango: "Jugador Casual",
+        descripcion: "El mejor jugador soy yo viejaaa"
+    },
+    {
+        nombre: "Premier",
+        rango: "Jugador Casual",
+        descripcion: "Aguante fisuras gaming guacho"
+    },
+    {
+        nombre: "Jey Jey",
+        rango: "Jugador Casual",
+        descripcion: "Tiki taka tu vieja en tanga, sali jugar un counter en fisuras gaming?"
+    },
+    {
+        nombre: "La paki",
+        rango: "Jugadora Casual",
+        descripcion: "Prefiero quedarme en casa viciando que salir afuera jajaja"
+    },
+    {
+        nombre: "Stopping Power",
+        rango: "Admin",
+        descripcion: "Me la como doblada, y que?"
+    },
+    {
         nombre: "El papu",
         rango: "Admin",
         descripcion: "Te queres ir baneado?"
@@ -26,7 +51,7 @@ const ReseniasUsuarios: ReseniaUsuario[] = [
         descripcion: "Un muy buen server para entrar a jugar despues de un día agotador"
     },
     {
-        nombre: "Wis",
+        nombre: "Wiz",
         rango: "Staff",
         descripcion: "SK te amo"
     },
@@ -36,7 +61,7 @@ const ReseniasUsuarios: ReseniaUsuario[] = [
         descripcion: "Un muy buen servidor para despejarse después de una paja"
     },
     {
-        nombre: "Optica Mabel",
+        nombre: "Palestina",
         rango: "Jugador Casual",
         descripcion: "En este servidor se busca respetar a los demás y pasarla bien"
     },
