@@ -1,10 +1,10 @@
 "use client"
 import { Box } from "@mui/material";
 import CircularBox from "./components/CircularBox";
+import ServerBox from "./components/ServerBox";
 import TablePlayerScore from './components/TablePlayerScore';
 import UsersReviewsGallery from "./components/UsersReviewsGallery";
-import SocialMediaData from "./data/socialMediaData";
-import ServerBox from "./components/ServerBox";
+import SocialMediaData, { SocialMediaDataI } from "./data/socialMediaData";
 
 export default function Home() {
   return (
@@ -13,12 +13,10 @@ export default function Home() {
       <UsersReviewsGallery />
       <TablePlayerScore />
       {
-        SocialMediaData.map((socialMedia, key) => (
+        SocialMediaData.map((socialMedia: SocialMediaDataI, key) => (
           <CircularBox
             key={key}
-            icon={socialMedia.icon}
-            primaryColor={socialMedia.primaryColor}
-            description={socialMedia.description}
+            {...socialMedia}
           />
         ))
       }
