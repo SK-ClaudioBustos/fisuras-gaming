@@ -1,5 +1,7 @@
 "use client"
 
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
+import { Box, Typography } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
@@ -9,17 +11,16 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import { Player, PlayerData } from '../data/platersData';
-import { Box, Typography } from '@mui/material';
+import { color1, color3 } from '../styles/colors';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: "#2B088C",
+    backgroundColor: color3,
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: "1.3vw",
-    backgroundColor: "#3A0BBB",
-    // color: "#7749F4"
+    backgroundColor: color1,
   },
 }));
 
@@ -29,6 +30,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
+const tableStyles = { width: "50vw", margin: "auto", boxShadow: "none", borderRadius: "10px" }
 
 const getCorrectColor = (key: number): string => {
   switch (key) {
@@ -37,7 +39,7 @@ const getCorrectColor = (key: number): string => {
     case 1:
       return "#fff"
     case 2:
-      return "#FAC014"
+      return "#b87333"
     default:
       return "#C1C2C3";
   }
@@ -45,7 +47,7 @@ const getCorrectColor = (key: number): string => {
 
 export default function TablePlayerScore() {
   return (
-    <>
+    <Box margin={"10vw"}>
       <Box sx={{ display: "flex", flexDirection: "column", textAlign: "center", marginBottom: "1rem" }}>
         <Typography fontSize={"3vw"}>
           Mejores jugadores
@@ -54,7 +56,7 @@ export default function TablePlayerScore() {
           Aquí podras ver algunos de los mejores jugadores del servidor
         </Typography>
       </Box>
-      <TableContainer sx={{ width: "50vw", margin: "auto" }} component={Paper}>
+      <TableContainer sx={tableStyles} component={Paper}>
         <Table aria-label="tabla personalizada">
           <TableHead>
             <TableRow>
@@ -69,6 +71,11 @@ export default function TablePlayerScore() {
               <StyledTableRow key={key}>
                 <StyledTableCell component="th" sx={{ color: getCorrectColor(key) }} scope="row">
                   {player.nick}
+                  {
+                    [0, 1, 2].includes(key) && (
+                      <WorkspacePremiumIcon sx={{ fontSize: "1rem" }} />
+                    )
+                  }
                 </StyledTableCell>
                 <StyledTableCell sx={{ color: getCorrectColor(key) }} align="right">{player.frags}</StyledTableCell>
                 <StyledTableCell sx={{ color: getCorrectColor(key) }} align="right">{player.aciertos}</StyledTableCell>
@@ -78,6 +85,6 @@ export default function TablePlayerScore() {
           </TableBody>
         </Table>
       </TableContainer>
-    </>
+    </Box>
   );
 }

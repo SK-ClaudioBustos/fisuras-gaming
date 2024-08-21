@@ -6,6 +6,11 @@ export interface ReseniaUsuario {
 
 const ReseniasUsuarios: ReseniaUsuario[] = [
     {
+        nombre: "Conogol",
+        rango: "Jugador Casual",
+        descripcion: "El mejor de toda Argentina, aguante Fisurass"
+    },
+    {
         nombre: "Sensa",
         rango: "Jugador Casual",
         descripcion: "El mejor jugador soy yo viejaaa"

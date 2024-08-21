@@ -9,6 +9,15 @@ import { useState } from "react";
 import ReseniasUsuarios from "../data/usersData";
 import { UserReview } from "./UserReview";
 
+
+const boxReviews = {
+  borderRadius: "10px",
+  backgroundColor: "#011140",
+  padding: "3vw",
+  margin: "auto",
+  justifyItems: "center"
+}
+
 export default function TextMobileStepper() {
 
   const cantidadResenias = ReseniasUsuarios.length;
@@ -26,7 +35,7 @@ export default function TextMobileStepper() {
   const siguiente = activeStep === cantidadResenias - 1 ? 0 : activeStep + 1;
 
   return (
-    <>
+    <Box marginTop={"10vw"}>
       <Box sx={{ display: "flex", flexDirection: "column", textAlign: "center", marginBottom: "1rem" }}>
         <Typography fontSize={"3vw"}>
           Reseñas de usuarios
@@ -35,7 +44,7 @@ export default function TextMobileStepper() {
           Te dejamos algunos comentarios de nuestros mas fieles jugadores
         </Typography>
       </Box>
-      <Box sx={{ borderRadius: "5px", backgroundColor: "#485697", padding: "3vw", margin: "auto", justifyItems: "center" }}>
+      <Box sx={boxReviews}>
 
         <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-around" }}>
           <UserReview
@@ -52,7 +61,6 @@ export default function TextMobileStepper() {
         </Box>
 
         <MobileStepper
-          variant="dots"
           steps={cantidadResenias}
           position="static"
           activeStep={activeStep}
@@ -80,7 +88,7 @@ export default function TextMobileStepper() {
           }
         />
       </Box>
-    </>
+    </Box>
 
   );
 }

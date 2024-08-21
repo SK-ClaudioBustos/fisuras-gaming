@@ -1,10 +1,18 @@
 import { Box, Typography } from "@mui/material"
+import { color2, color6 } from "../styles/colors"
+
+const footerStyles = {
+    backgroundColor: color6,
+    textAlign: "end",
+    padding: "10px",
+    borderTop: `1px solid ${color2}`
+}
 
 const Footer = () => {
     return (
-        <Box sx={{backgroundColor: "#585B69", textAlign: "end", padding: "10px"}}>
-            <Typography fontSize={"0.9rem"}>
-                paginá creada por Claudio Bustos
+        <Box sx={footerStyles}>
+            <Typography fontSize={"0.9rem"} marginRight={"1.5vw"}>
+                paginá creada por -SK-
             </Typography>
         </Box>
     )
