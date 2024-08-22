@@ -1,14 +1,14 @@
 "use client"
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import { Typography } from '@mui/material';
+import { Typography, useMediaQuery } from '@mui/material';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import MobileStepper from '@mui/material/MobileStepper';
 import { useState } from "react";
 import Reviews from "../data/reviewsData";
-import { UserReview } from "./UserReview";
 import { color4 } from '../styles/colors';
+import { UserReview } from "./UserReview";
 
 const boxReviews = {
   borderRadius: "10px",
@@ -22,14 +22,14 @@ const mobileStyles = {
   backgroundColor: color4,
   borderRadius: "10px",
   height: "5vh",
-  width: "30%",
+  // width: "30%",
   margin: "2vh auto auto auto"
 }
 
 export default function TextMobileStepper() {
 
   const cantidadResenias = Reviews.length;
-
+  const matches = useMediaQuery("(max-width:600px)");
   const [activeStep, setActiveStep] = useState(0);
 
   const handleNext = () => {
@@ -54,17 +54,26 @@ export default function TextMobileStepper() {
       <Box sx={boxReviews}>
 
         <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-around" }}>
-          <UserReview
-            title={Reviews[anterior].nombre}
-            description={Reviews[anterior].descripcion}
-            subtitle={Reviews[anterior].rango}
-            thumbnail="./img/user.png" />
+          {
+            !matches && (
+              <UserReview
+                title={Reviews[anterior].nombre}
+                description={Reviews[anterior].descripcion}
+                subtitle={Reviews[anterior].rango}
+                thumbnail="./img/user.png" />
+            )
+          }
+
           <UserReview title={Reviews[activeStep].nombre} description={Reviews[activeStep].descripcion} subtitle={Reviews[activeStep].rango} thumbnail="./img/user.png" />
-          <UserReview
-            title={Reviews[siguiente].nombre}
-            description={Reviews[siguiente].descripcion}
-            subtitle={Reviews[siguiente].rango}
-            thumbnail="./img/user.png" />
+          {
+            !matches && (
+              <UserReview
+                title={Reviews[siguiente].nombre}
+                description={Reviews[siguiente].descripcion}
+                subtitle={Reviews[siguiente].rango}
+                thumbnail="./img/user.png" />
+            )
+          }
         </Box>
 
         <MobileStepper

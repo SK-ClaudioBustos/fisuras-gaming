@@ -3,7 +3,7 @@ import { Card } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 const StyledCard = styled(Card)(({ theme: { breakpoints, spacing } }) => ({
-    width: "40%",
+    width: "45%",
     margin: "auto",
     borderRadius: spacing(2),
     transition: "0.3s",
@@ -17,10 +17,13 @@ const StyledCard = styled(Card)(({ theme: { breakpoints, spacing } }) => ({
     paddingLeft: 8,
     paddingRight: 8,
     background: color1,
-    [breakpoints.up("sm")]: {
-        textAlign: "left",
-        flexDirection: "row-reverse",
+    fontSize: "2vw",
+    [breakpoints.down("md")]: {
+        width: "70%"
     },
+    [breakpoints.down("sm")]: {
+        width: "90%"
+    }
 }));
 
 export default StyledCard;

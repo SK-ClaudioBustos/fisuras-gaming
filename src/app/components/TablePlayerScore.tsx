@@ -1,7 +1,7 @@
 "use client"
 
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useMediaQuery } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
@@ -14,9 +14,11 @@ import { Player, PlayerData } from '../data/platersData';
 import { color1, color3 } from '../styles/colors';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  padding: "1.5vw",
   [`&.${tableCellClasses.head}`]: {
     borderBottom: "none",
     backgroundColor: color1,
+    fontSize: "1.8vw",
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
@@ -32,8 +34,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-const tableStyles = { width: "50vw", margin: "auto", boxShadow: "none", borderRadius: "10px" }
-
 const getCorrectColor = (key: number): string => {
   switch (key) {
     case 0:
@@ -45,6 +45,14 @@ const getCorrectColor = (key: number): string => {
     default:
       return "#C1C2C3";
   }
+}
+
+const tableStyles = {
+  width: "80%",
+  margin: "auto",
+  boxShadow: "none",
+  borderRadius: "10px",
+  fontSize: "3vw"
 }
 
 export default function TablePlayerScore() {

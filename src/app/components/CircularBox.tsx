@@ -8,7 +8,7 @@ const CircularBox = (props: SocialMediaDataI) => {
         marginY: "3vh",
         background: primaryColor,
         borderRadius: "80px",
-        padding: "2.5rem",
+        padding: "3vw",
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-around",
@@ -24,7 +24,7 @@ const CircularBox = (props: SocialMediaDataI) => {
                     {icon}
                 </Box>
                 <Box sx={{ marginLeft: "10px", display: "flex", alignItems: "center" }}>
-                    <Typography fontSize={"1.5rem"}>
+                    <Typography fontSize={"2vw"}>
                         {description}
                     </Typography>
                 </Box>
