@@ -1,28 +1,35 @@
+"use client"
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import MobileStepper from '@mui/material/MobileStepper';
-import { useTheme } from '@mui/material/styles';
 import { useState } from "react";
 import ReseniasUsuarios from "../data/usersData";
+import { color1, color2, color3 } from '../styles/colors';
 import { UserReview } from "./UserReview";
-
 
 const boxReviews = {
   borderRadius: "10px",
-  backgroundColor: "#011140",
+  backgroundColor: color3,
   padding: "3vw",
   margin: "auto",
   justifyItems: "center"
+}
+
+const mobileStyles = {
+  backgroundColor: color1,
+  borderRadius: "10px",
+  height: "5vh",
+  width: "30%",
+  margin: "2vh auto auto auto"
 }
 
 export default function TextMobileStepper() {
 
   const cantidadResenias = ReseniasUsuarios.length;
 
-  const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
 
   const handleNext = () => {
@@ -64,26 +71,17 @@ export default function TextMobileStepper() {
           steps={cantidadResenias}
           position="static"
           activeStep={activeStep}
-          sx={{ backgroundColor: "#4E61B6", borderRadius: "10px", height: "5vh", width: "30%", margin: "2vh auto auto auto" }}
+          sx={mobileStyles}
           nextButton={
             <Button
               size="small"
-              onClick={handleNext}
-            >
-              {theme.direction === 'rtl' ? (
-                <KeyboardArrowLeft />
-              ) : (
-                <KeyboardArrowRight />
-              )}
+              onClick={handleNext}>
+              <KeyboardArrowRight />
             </Button>
           }
           backButton={
             <Button size="small" onClick={handleBack}>
-              {theme.direction === 'rtl' ? (
-                <KeyboardArrowRight />
-              ) : (
-                <KeyboardArrowLeft />
-              )}
+              <KeyboardArrowLeft />
             </Button>
           }
         />

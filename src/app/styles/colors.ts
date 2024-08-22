@@ -6,6 +6,6 @@ export const color2 = "#F2F2F2";
 export const color6 = "#13120f";
 
 export const color1 = "#575757";
-export const color3 = "#788585";
+export const color3 = "#393938";
 
 

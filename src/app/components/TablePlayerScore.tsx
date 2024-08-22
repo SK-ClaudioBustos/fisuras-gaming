@@ -15,12 +15,14 @@ import { color1, color3 } from '../styles/colors';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: color3,
+    borderBottom: "none",
+    backgroundColor: color1,
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
+    borderBottom: "none",
     fontSize: "1.3vw",
-    backgroundColor: color1,
+    backgroundColor: color3,
   },
 }));
 

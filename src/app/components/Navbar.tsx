@@ -9,7 +9,6 @@ const navbarStyles = {
 }
 
 const Navbar = () => {
-
   return (
     <Box sx={navbarStyles}>
       <Typography fontSize={"3vw"} display={"inline-block"}>

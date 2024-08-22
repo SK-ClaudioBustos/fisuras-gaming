@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
+import { color1, color2 } from "../styles/colors";
 
 const DivRoot = styled("div")(() => ({
     width: "30%",
@@ -15,7 +16,7 @@ const ColumnCard = styled("div")(() => ({
     zIndex: 1,
     position: "relative",
     borderRadius: "1rem",
-    backgroundColor: "#4E61B6",
+    backgroundColor: color1,
     transition: "0.4s",
     height: "100%",
 }));
@@ -46,10 +47,10 @@ export const UserReview = (props: PropsUserReview) => {
                 <Box display="flex" p={2} gap={2} flexWrap="nowrap">
                     <AvatarLogo variant={"rounded"} src={thumbnail} />
                     <Box>
-                        <Typography fontSize={"1.2rem"}>
+                        <Typography fontSize={"1.2rem"} sx={{color: "gold"}}>
                             {title}
                         </Typography>
-                        <Typography fontSize={"1rem"}>
+                        <Typography fontSize={"1rem"} sx={{color: "#b87333"}}>
                             {subtitle}
                         </Typography>
                     </Box>
@@ -57,7 +58,7 @@ export const UserReview = (props: PropsUserReview) => {
                 <Box
                     pb={1}
                     px={2}
-                    color={"#c1c2c3"}
+                    color={color2}
                     fontSize={"0.90rem"}
                     flexGrow={1}
                 >
