@@ -6,20 +6,20 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import MobileStepper from '@mui/material/MobileStepper';
 import { useState } from "react";
-import ReseniasUsuarios from "../data/usersData";
-import { color1, color2, color3 } from '../styles/colors';
+import Reviews from "../data/reviewsData";
 import { UserReview } from "./UserReview";
+import { color4 } from '../styles/colors';
 
 const boxReviews = {
   borderRadius: "10px",
-  backgroundColor: color3,
+  backgroundColor: "#000",
   padding: "3vw",
   margin: "auto",
   justifyItems: "center"
 }
 
 const mobileStyles = {
-  backgroundColor: color1,
+  backgroundColor: color4,
   borderRadius: "10px",
   height: "5vh",
   width: "30%",
@@ -28,7 +28,7 @@ const mobileStyles = {
 
 export default function TextMobileStepper() {
 
-  const cantidadResenias = ReseniasUsuarios.length;
+  const cantidadResenias = Reviews.length;
 
   const [activeStep, setActiveStep] = useState(0);
 
@@ -55,15 +55,15 @@ export default function TextMobileStepper() {
 
         <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-around" }}>
           <UserReview
-            title={ReseniasUsuarios[anterior].nombre}
-            description={ReseniasUsuarios[anterior].descripcion}
-            subtitle={ReseniasUsuarios[anterior].rango}
+            title={Reviews[anterior].nombre}
+            description={Reviews[anterior].descripcion}
+            subtitle={Reviews[anterior].rango}
             thumbnail="./img/user.png" />
-          <UserReview title={ReseniasUsuarios[activeStep].nombre} description={ReseniasUsuarios[activeStep].descripcion} subtitle={ReseniasUsuarios[activeStep].rango} thumbnail="./img/user.png" />
+          <UserReview title={Reviews[activeStep].nombre} description={Reviews[activeStep].descripcion} subtitle={Reviews[activeStep].rango} thumbnail="./img/user.png" />
           <UserReview
-            title={ReseniasUsuarios[siguiente].nombre}
-            description={ReseniasUsuarios[siguiente].descripcion}
-            subtitle={ReseniasUsuarios[siguiente].rango}
+            title={Reviews[siguiente].nombre}
+            description={Reviews[siguiente].descripcion}
+            subtitle={Reviews[siguiente].rango}
             thumbnail="./img/user.png" />
         </Box>
 

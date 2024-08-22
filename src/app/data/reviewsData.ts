@@ -4,7 +4,7 @@ export interface ReseniaUsuario {
     descripcion: string;
 }
 
-const ReseniasUsuarios: ReseniaUsuario[] = [
+const Reviews: ReseniaUsuario[] = [
     {
         nombre: "Conogol",
         rango: "Jugador Casual",
@@ -38,7 +38,7 @@ const ReseniasUsuarios: ReseniaUsuario[] = [
     {
         nombre: "El papu",
         rango: "Admin",
-        descripcion: "Te queres ir baneado?"
+        descripcion: "Portate bien o te vas baneado"
     },
     {
         nombre: "Falopa",
@@ -82,4 +82,4 @@ const ReseniasUsuarios: ReseniaUsuario[] = [
     }
 ];
 
-export default ReseniasUsuarios;
+export default Reviews;

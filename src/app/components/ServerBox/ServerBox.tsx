@@ -47,7 +47,7 @@ export default function ServerBox() {
                             TransitionComponent={SlideTransition}
                             open={open}
                             autoHideDuration={2000}
-                            message="IP copiada en el portapapeles"
+                            message="IP copiada"
                             onClose={() => setOpen(false)}
                             anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
                         />

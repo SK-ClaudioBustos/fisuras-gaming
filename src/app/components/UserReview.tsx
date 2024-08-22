@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
-import { color1, color2 } from "../styles/colors";
+import { color1, color2, color4 } from "../styles/colors";
 
 const DivRoot = styled("div")(() => ({
     width: "30%",
@@ -16,7 +16,7 @@ const ColumnCard = styled("div")(() => ({
     zIndex: 1,
     position: "relative",
     borderRadius: "1rem",
-    backgroundColor: color1,
+    backgroundColor: color4,
     transition: "0.4s",
     height: "100%",
 }));
@@ -50,7 +50,7 @@ export const UserReview = (props: PropsUserReview) => {
                         <Typography fontSize={"1.2rem"} sx={{color: "gold"}}>
                             {title}
                         </Typography>
-                        <Typography fontSize={"1rem"} sx={{color: "#b87333"}}>
+                        <Typography fontSize={"1rem"} sx={{color: "#c1c1c1"}}>
                             {subtitle}
                         </Typography>
                     </Box>
