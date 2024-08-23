@@ -4,26 +4,26 @@ import DiscordIcon from '../icons/DiscordIcon';
 
 export interface SocialMediaDataI {
     icon: JSX.Element;
-    primaryColor: string;
     link: string;
+    label: string;
 }
 
 const SocialMediaData: SocialMediaDataI[] = [
     {
         icon: <WhatsAppIcon sx={{ fontSize: "2vw" }} />,
-        primaryColor: "#1BFA8C",
-        link: ""
+        link: "https://chat.whatsapp.com/LEFsktR9tHp5jgrserHc5f",
+        label: "whatsapp"
     },
     {
         icon: <InstagramIcon sx={{ fontSize: "2vw" }} />,
-        primaryColor: "linear-gradient(41deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 48%, rgba(252,176,69,1) 100%)",
-        link: "https://www.instagram.com/fisurasgaming?igsh=YzAwMG9iYWE3YzRn"
+        link: "https://www.instagram.com/fisurasgaming?igsh=YzAwMG9iYWE3YzRn",
+        label: "instagram"
 
     },
     {
         icon: <DiscordIcon width={"2vw"} height={"2vw"} style={{ filter: "brightness(0%) invert(100%)" }} />,
-        primaryColor: "#0F3BAC",
-        link: "https://discord.gg/Zq4NMp72ka"
+        link: "https://discord.gg/Zq4NMp72ka",
+        label: "discord"
     }
 ];
 
