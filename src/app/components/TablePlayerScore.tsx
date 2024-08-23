@@ -1,7 +1,7 @@
 "use client"
 
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
-import { Box, Typography, useMediaQuery } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
@@ -18,17 +18,17 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     borderBottom: "none",
     backgroundColor: color1,
-    fontSize: "1.8vw",
+    fontSize: "2vw",
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
     borderBottom: "none",
-    fontSize: "1.3vw",
+    fontSize: "2vw",
     backgroundColor: color3,
   },
 }));
 
-const StyledTableRow = styled(TableRow)(({ theme }) => ({
+const StyledTableRow = styled(TableRow)(() => ({
   '&:last-child td, &:last-child th': {
     border: 0,
   },
@@ -52,7 +52,6 @@ const tableStyles = {
   margin: "auto",
   boxShadow: "none",
   borderRadius: "10px",
-  fontSize: "3vw"
 }
 
 export default function TablePlayerScore() {
@@ -83,7 +82,7 @@ export default function TablePlayerScore() {
                   {player.nick}
                   {
                     [0, 1, 2].includes(key) && (
-                      <WorkspacePremiumIcon sx={{ fontSize: "1rem" }} />
+                      <WorkspacePremiumIcon sx={{ fontSize: "2vw" }} />
                     )
                   }
                 </StyledTableCell>

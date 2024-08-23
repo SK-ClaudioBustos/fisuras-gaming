@@ -5,7 +5,7 @@ const TypographyOverline = styled(Typography)(({ }) => ({
     lineHeight: 2,
     color: "#ffffff",
     fontWeight: "bold",
-    fontSize: "1.5vw",
+    fontSize: "1.8vw",
     margin: "0"
 }));
 

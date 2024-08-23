@@ -9,11 +9,8 @@ import { color2, color5 } from "./styles/colors";
 import "./styles/globals.css";
 import "./styles/reset.css";
 import theme from "./styles/theme";
+import Head from "next/head";
 
-export const metadataPage: Metadata = {
-  title: "Fisuras Gaming",
-  description: "El mejor servidor de Counter Strike",
-};
 const font = Ubuntu({ weight: "400", subsets: ["latin"] });
 
 const bodyStyles = {
@@ -38,6 +35,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <title>Fisuras Gaming</title>
+        <meta property="og:title" content="Fisuras Gaming" key="title" />
+      </Head>
       <body className={font.className} style={bodyStyles}>
         <ThemeProvider theme={theme}>
           <Navbar />

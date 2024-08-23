@@ -42,7 +42,7 @@ export default function ServerBox() {
                     </TypographyOverline>
                     <TypographyHeading gutterBottom>
                         #01 PUBLICO ➡️
-                        <Button color="primary" onClick={handleClick}>45.235.98.68:27048</Button>
+                        <Button sx={{fontSize: "1.8vw"}} onClick={handleClick}>45.235.98.68:27048</Button>
                         <Snackbar
                             TransitionComponent={SlideTransition}
                             open={open}

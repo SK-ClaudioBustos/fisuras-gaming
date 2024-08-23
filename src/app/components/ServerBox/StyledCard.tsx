@@ -19,10 +19,10 @@ const StyledCard = styled(Card)(({ theme: { breakpoints, spacing } }) => ({
     background: color1,
     fontSize: "2vw",
     [breakpoints.down("md")]: {
-        width: "70%"
+        width: "50%"
     },
     [breakpoints.down("sm")]: {
-        width: "90%"
+        width: "60%"
     }
 }));
 

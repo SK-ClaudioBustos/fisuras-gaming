@@ -31,11 +31,6 @@ const Reviews: ReseniaUsuario[] = [
         descripcion: "Prefiero quedarme en casa viciando que salir afuera jajaja"
     },
     {
-        nombre: "Stopping Power",
-        rango: "Admin",
-        descripcion: "Me la como doblada, y que?"
-    },
-    {
         nombre: "El papu",
         rango: "Admin",
         descripcion: "Portate bien o te vas baneado"
