@@ -10,7 +10,6 @@ export default function Home() {
     <Box sx={{ paddingY: "2rem" }}>
       <ServerBox />
       <TablePlayerScore />
-      <SocialMediaBox/>
       <UsersReviewsGallery />
     </Box>
   );
