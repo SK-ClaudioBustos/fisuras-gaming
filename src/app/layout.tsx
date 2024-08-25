@@ -1,15 +1,14 @@
 import { Container, ThemeProvider } from "@mui/material";
-import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
-import bg from '../../public/img/camo.jpg';
+import Head from "next/head";
+import bg from '../../public/img/camo.svg';
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import PresentionBox from "./components/PresentionBox";
-import { color2, color5 } from "./styles/colors";
+import { color5 } from "./styles/colors";
 import "./styles/globals.css";
 import "./styles/reset.css";
 import theme from "./styles/theme";
-import Head from "next/head";
 
 const font = Ubuntu({ weight: "400", subsets: ["latin"] });
 
