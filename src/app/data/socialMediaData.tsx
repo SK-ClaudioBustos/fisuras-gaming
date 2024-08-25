@@ -22,7 +22,7 @@ const SocialMediaData: SocialMediaDataI[] = [
     },
     {
         icon: <DiscordIcon width={"2vw"} height={"2vw"} style={{ filter: "brightness(0%) invert(100%)" }} />,
-        link: "https://discord.gg/Zq4NMp72ka",
+        link: "https://discord.gg/G4SMr8ByXr",
         label: "discord"
     }
 ];
