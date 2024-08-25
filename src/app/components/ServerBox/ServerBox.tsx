@@ -40,8 +40,8 @@ export default function ServerBox() {
                         Unete a nuestro servidor con la siguiente IP
                     </TypographyOverline>
                     <TypographyHeading gutterBottom>
-                        #01 PUBLICO ➡️
-                        <Button sx={{fontSize: "1.8vw"}} onClick={handleClick}>45.235.98.68:27048</Button>
+                        #01 PUBLICO 
+                        <Button sx={{fontSize: "1.8vw", marginLeft: "5px"}} onClick={handleClick}>45.235.98.68:27048</Button>
                         <Snackbar
                             TransitionComponent={SlideTransition}
                             open={open}
