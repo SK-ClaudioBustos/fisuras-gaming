@@ -21,7 +21,6 @@ const boxStyles = {
 export default function ServerBox() {
 
     const [open, setOpen] = useState(false)
-
     const handleClick = () => {
         setOpen(true);
     }

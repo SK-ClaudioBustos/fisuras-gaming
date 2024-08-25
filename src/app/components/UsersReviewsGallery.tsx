@@ -7,11 +7,10 @@ import Button from '@mui/material/Button';
 import MobileStepper from '@mui/material/MobileStepper';
 import { useState } from "react";
 import Reviews from "../data/reviewsData";
-import { color4 } from '../styles/colors';
 import { UserReview } from "./UserReview";
 
 const boxReviews = {
-  borderRadius: "10px",
+  borderRadius: "0px",
   backgroundColor: "#000",
   padding: "3vw",
   margin: "auto",
@@ -19,10 +18,9 @@ const boxReviews = {
 }
 
 const mobileStyles = {
-  backgroundColor: color4,
-  borderRadius: "10px",
+  backgroundColor: "#000",
+  borderRadius: "0px",
   height: "5vh",
-  // width: "30%",
   margin: "2vh auto auto auto"
 }
 
@@ -88,6 +86,10 @@ export default function TextMobileStepper() {
               <KeyboardArrowRight />
             </Button>
           }
+          classes={{
+            dots: "dots-stepper",
+            dotActive: "dots-stepper"
+          }}
           backButton={
             <Button size="small" onClick={handleBack}>
               <KeyboardArrowLeft />

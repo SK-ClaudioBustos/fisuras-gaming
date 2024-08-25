@@ -3,55 +3,21 @@
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import { Box, Typography } from '@mui/material';
 import Paper from '@mui/material/Paper';
-import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
-import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import { Player, PlayerData } from '../data/platersData';
-import { color1, color3 } from '../styles/colors';
-
-const StyledTableCell = styled(TableCell)(({ theme }) => ({
-  padding: "1.5vw",
-  [`&.${tableCellClasses.head}`]: {
-    borderBottom: "none",
-    backgroundColor: color1,
-    fontSize: "2vw",
-    color: theme.palette.common.white,
-  },
-  [`&.${tableCellClasses.body}`]: {
-    borderBottom: "none",
-    fontSize: "2vw",
-    backgroundColor: color3,
-  },
-}));
-
-const StyledTableRow = styled(TableRow)(() => ({
-  '&:last-child td, &:last-child th': {
-    border: 0,
-  },
-}));
-
-const getCorrectColor = (key: number): string => {
-  switch (key) {
-    case 0:
-      return "#FFD700"
-    case 1:
-      return "#fff"
-    case 2:
-      return "#b87333"
-    default:
-      return "#C1C2C3";
-  }
-}
+import StyledTableCell from './TablePlayer/StyledTableCell';
+import StyledTableRow from './TablePlayer/StyledTableRow';
+import getCorrectColor from './TablePlayer/functions';
 
 const tableStyles = {
   width: "80%",
   margin: "auto",
   boxShadow: "none",
-  borderRadius: "10px",
+  borderRadius: "0px",
 }
 
 export default function TablePlayerScore() {

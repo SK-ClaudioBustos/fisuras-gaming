@@ -1,35 +1,9 @@
 import { Typography } from "@mui/material";
-import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
-import { styled } from "@mui/material/styles";
-import { color2, color4 } from "../styles/colors";
-
-const DivRoot = styled("div")(({ theme: { breakpoints } }) => ({
-    width: "30%",
-    transition: "0.3s",
-    position: "relative",
-    [breakpoints.down("sm")]: {
-        width: "90%"
-    }
-}));
-
-const ColumnCard = styled("div")(() => ({
-    display: "flex",
-    flexDirection: "column",
-    zIndex: 1,
-    position: "relative",
-    borderRadius: "1rem",
-    backgroundColor: color4,
-    transition: "0.4s",
-    height: "100%",
-    padding: "1vw"
-}));
-
-const AvatarLogo = styled(Avatar)(() => ({
-    width: "5.5vw",
-    height: "5.5vw",
-    borderRadius: "50%",
-}));
+import { color2 } from "../styles/colors";
+import AvatarLogo from "./UserReview/AvatarLogo";
+import ColumnCard from "./UserReview/ColumnCard";
+import DivRoot from "./UserReview/DivRoot";
 
 interface PropsUserReview {
     title: string;

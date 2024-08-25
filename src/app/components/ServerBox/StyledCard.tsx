@@ -1,11 +1,11 @@
-import { color1 } from "@/app/styles/colors";
+import { color4 } from "@/app/styles/colors";
 import { Card } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-const StyledCard = styled(Card)(({ theme: { breakpoints, spacing } }) => ({
+const StyledCard = styled(Card)(({ theme: { breakpoints } }) => ({
     width: "45%",
     margin: "auto",
-    borderRadius: spacing(2),
+    borderRadius: "0px",
     transition: "0.3s",
     position: "relative",
     overflow: "initial",
@@ -16,7 +16,7 @@ const StyledCard = styled(Card)(({ theme: { breakpoints, spacing } }) => ({
     textAlign: "center",
     paddingLeft: 8,
     paddingRight: 8,
-    background: color1,
+    background: color4,
     fontSize: "2vw",
     [breakpoints.down("md")]: {
         width: "50%"

@@ -13,7 +13,6 @@ const Footer = () => {
     return (
         <Box sx={footerStyles}>
             <SocialMediaBox />
-
             <Typography fontSize={"0.9rem"} marginRight={"1.5vw"}>
                 paginá creada por -SK-
             </Typography>

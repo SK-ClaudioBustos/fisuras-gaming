@@ -20,8 +20,6 @@ const bodyStyles = {
 }
 
 const containerStyles = {
-  borderTop: `1px solid ${color2}`,
-  borderBottom: `1px solid ${color2}`,
   marginY: "25px",
   backgroundColor: color5,
   minHeight: "calc(100vh - 50px)",

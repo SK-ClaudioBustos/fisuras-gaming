@@ -7,7 +7,7 @@ const SocialMediaBox = () => {
             <Box sx={{ display: "flex", justifyContent: "center", gap: 1 }}>
                 {
                     SocialMediaData.map((socialMedia: SocialMediaDataI, key) => (
-                        <IconButton href={socialMedia.link} key={key} color="primary" aria-label={`icono de ${socialMedia.label}`}>
+                        <IconButton href={socialMedia.link} target="_blank" key={key} color="primary" aria-label={`icono de ${socialMedia.label}`}>
                             {socialMedia.icon}
                         </IconButton>
                     ))
